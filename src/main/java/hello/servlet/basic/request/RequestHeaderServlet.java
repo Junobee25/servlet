@@ -13,7 +13,7 @@ import java.util.Enumeration;
 public class RequestHeaderServlet extends HttpServlet {
 
     @Override
-    public void service(HttpServletRequest requset, HttpServletResponse response) throws ServletException, IOException {
+    protected void service(HttpServletRequest requset, HttpServletResponse response) throws ServletException, IOException {
         System.out.println("--- REQUEST-LINE - start --- ");
         System.out.println("request.getMethod() = " + requset.getMethod());
 
