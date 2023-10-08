@@ -31,6 +31,7 @@ public class FrontControllerServletV1 extends HttpServlet {
         System.out.println("FrontControllerServletV1.service");
 
         String requestURI = request.getRequestURI();
+        System.out.println(requestURI);
 
         // ControllerV1 controller = new MemberListController();
         // 부모는 자식을 받을 수 있음
