@@ -21,12 +21,18 @@ public class MyView {
     }
 
     public void render(Map<String, Object> model, HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        System.out.println("render 호출");
         modelToRequestAttribute(model, request);
         RequestDispatcher dispatcher = request.getRequestDispatcher(viewPath);
+
+        System.out.println("dispatcher finish");
+        // 렌더링
         dispatcher.forward(request,response);
     }
 
     private void modelToRequestAttribute(Map<String, Object> model, HttpServletRequest request) {
+        System.out.println("modelToRequestAttribut 호출");
+        System.out.println("model 궁금한것 = " + model);
         model.forEach((key, value) -> request.setAttribute(key,value));
     }
 }
